@@ -1,0 +1,692 @@
+{
+  "version": "1.0",
+  "source": "Hamada Disease-Diet Matrix",
+  "total_diseases": 137,
+  "disease_categories": {
+    "digestive": ["acute_gastritis", "gastric_duodenal_ulcer", "chronic_gastritis", "gastritis", "gastric_cancer", "esophageal_cancer", "colorectal_cancer", "colorectal_polyp", "fatty_liver", "liver_cancer", "hepatitis", "cirrhosis", "pancreatic_cancer", "pancreatitis", "chronic_pancreatitis", "cholecystitis", "cholelithiasis", "gerd", "esophagitis", "gastroptosis", "irritable_bowel_syndrome", "constipation", "atonic_constipation", "diarrhea", "acute_enteritis", "chronic_enteritis"],
+    "cardiovascular": ["hypertension", "hyperlipidemia", "atherosclerosis", "myocardial_infarction", "angina_pectoris", "heart_failure", "cerebral_infarction", "cerebral_hemorrhage", "transient_ischemic_attack", "subarachnoid_hemorrhage", "arteriosclerosis", "benign_nephrosclerosis"],
+    "metabolic": ["diabetes_mellitus", "diabetic_retinopathy", "diabetic_nephropathy", "diabetic_neuropathy", "obesity", "gout_hyperuricemia", "hypothyroidism", "hyperthyroidism", "osteoporosis"],
+    "renal_urological": ["nephritis", "chronic_nephritis", "nephrotic_syndrome", "pyelonephritis", "nephrolithiasis", "urethritis", "cystitis", "prostatic_hypertrophy", "prostate_cancer", "bladder_cancer"],
+    "respiratory": ["bronchitis", "bronchiectasis", "bronchial_asthma", "pneumonia", "tuberculosis", "lung_cancer", "pharyngitis", "laryngitis"],
+    "dermatological": ["atopic_dermatitis", "seborrheic_dermatitis", "urticaria", "pruritus_cutaneus", "alopecia_areata", "psoriasis", "cheilitis", "stomatitis", "angular_cheilitis", "periodontal_disease", "gingivitis"],
+    "gynecological": ["dysmenorrhea", "menstrual_irregularity", "menorrhagia", "uterine_fibroids", "endometriosis", "uterine_cancer", "breast_cancer", "mastitis_mastopathy", "infertility"],
+    "ophthalmological": ["cataract", "glaucoma", "keratitis", "conjunctivitis", "diabetic_retinopathy", "floaters", "retinal_detachment", "presbyopia"],
+    "neurological_psychiatric": ["migraine", "trigeminal_neuralgia", "sciatica", "neuralgia", "parkinsons_disease", "alzheimers_disease", "depression", "insomnia", "autonomic_dysfunction", "menopause_disorders"],
+    "others": ["anemia", "chronic_fatigue", "cold_sensitivity", "edema", "hypotension", "acute_otitis_media", "chronic_otitis_media", "menieres_disease", "sudden_hearing_loss", "presbycusis", "urinary_incontinence", "osteoporosis", "osteoarthritis", "lumbar_disc_herniation", "cervical_spondylosis", "rheumatoid_arthritis", "gout", "herpes_zoster", "collagen_disease", "autoimmune_disease", "food_allergy", "allergic_rhinitis", "hay_fever", "common_cold", "influenza", "tinnitus", "dizziness", "shoulder_stiffness", "low_back_pain", "eye_strain", "tension_headache", "cerebral_anemia", "brain_tumor", "leukemia", "pulmonary_fibrosis", "pulmonary_edema", "emphysema", "chronic_bronchitis", "pericarditis", "endocarditis", "myocarditis", "arrhythmia", "parkinsons_disease", "multiple_sclerosis", "myasthenia_gravis"]
+  },
+  "risk_factors": {
+    "eating_patterns": {
+      "irregular": "Meal times are irregular",
+      "breakfast_skipping": "Often skip breakfast",
+      "late_night_meal": "Often eat late-night snacks before bed",
+      "fast_eating": "Eat quickly",
+      "picky_eating": "Have many food preferences",
+      "overeating": "Eat until full",
+      "frequent_dining_out": "Eat out frequently",
+      "drinking_without_food": "Skip meals when drinking alcohol"
+    },
+    "food_preferences": {
+      "high_salt": "Prefer salty foods",
+      "spicy": "Use strong spices",
+      "high_fat": "Prefer fatty foods",
+      "alcohol": "Drink alcohol daily",
+      "heavy_drinking": "Drink heavily once starting",
+      "burnt_food": "Like burnt meat and fish",
+      "soft_food": "Prefer soft foods",
+      "sweets": "Like sugary drinks and sweets",
+      "hot_food": "Prefer hot foods and drinks",
+      "caffeine": "Drink 5 or more cups of coffee daily",
+      "soda_on_empty_stomach": "Drink soda on empty stomach"
+    },
+    "dietary_tendencies": {
+      "high_meat": "Eat many meat dishes",
+      "no_meat": "Dislike meat",
+      "no_seafood": "Dislike fish",
+      "no_blue_fish": "Dislike blue-backed fish",
+      "western_diet": "Diet is Western-style",
+      "low_vegetables": "Dislike dark-colored vegetables",
+      "high_dairy": "Like milk and dairy products",
+      "low_dairy": "Dislike milk and dairy products",
+      "eggs_daily": "Eat 2 or more eggs daily",
+      "high_fruit": "Like fruit",
+      "low_fruit": "Dislike fruit",
+      "low_seaweed": "Dislike seaweed",
+      "low_small_fish": "Dislike small fish with bones",
+      "low_soy": "Dislike soy products",
+      "high_processed_food": "Frequently eat instant foods"
+    },
+    "fluid_intake": {
+      "high_fluid": "Drink plenty of fluids",
+      "low_fluid": "Often feel thirsty and sweat heavily",
+      "high_snacking": "Snack frequently"
+    },
+    "dietary_change": {
+      "became_bland": "Started preferring bland meals"
+    }
+  },
+  "disease_matrix": [
+    {
+      "disease_id": "atopic_dermatitis",
+      "disease_name": "Atopic Dermatitis",
+      "risk_factors": ["breakfast_skipping", "picky_eating", "high_fat", "sweets", "soda_on_empty_stomach", "no_seafood", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "high_processed_food", "high_snacking"],
+      "metabolic_impact": "Impaired skin barrier function → chronic inflammation",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "allergic_rhinitis",
+      "disease_name": "Allergic Rhinitis / Hay Fever",
+      "risk_factors": ["breakfast_skipping", "picky_eating", "spicy", "high_fat", "no_seafood", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "high_processed_food"],
+      "metabolic_impact": "Immune dysregulation → histamine hypersensitivity",
+      "category": "others"
+    },
+    {
+      "disease_id": "acute_gastritis",
+      "disease_name": "Acute Gastritis",
+      "risk_factors": ["irregular", "late_night_meal", "fast_eating", "overeating", "drinking_without_food", "high_salt", "spicy", "hot_food", "caffeine", "soda_on_empty_stomach", "high_meat"],
+      "metabolic_impact": "Gastric mucosal irritation → acute inflammation",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "gastric_duodenal_ulcer",
+      "disease_name": "Gastric / Duodenal Ulcer",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "overeating", "drinking_without_food", "high_salt", "spicy", "alcohol", "heavy_drinking", "hot_food", "soda_on_empty_stomach", "high_meat", "western_diet"],
+      "metabolic_impact": "Mucosal defense factor deficiency → acid erosion",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "transient_ischemic_attack",
+      "disease_name": "Transient Ischemic Attack",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "frequent_dining_out", "high_salt", "high_fat", "heavy_drinking", "high_meat", "no_seafood", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "low_fluid", "high_snacking"],
+      "metabolic_impact": "Transient cerebral blood flow reduction → temporary neurological deficits",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "pharyngitis",
+      "disease_name": "Pharyngitis",
+      "risk_factors": ["irregular", "overeating", "drinking_without_food", "alcohol", "heavy_drinking", "low_vegetables", "high_fruit"],
+      "metabolic_impact": "Pharyngeal mucosal inflammation → sore throat",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "alopecia_areata",
+      "disease_name": "Alopecia Areata",
+      "risk_factors": ["picky_eating", "overeating", "drinking_without_food", "alcohol", "heavy_drinking", "low_vegetables", "high_fruit", "low_soy", "high_processed_food", "high_snacking"],
+      "metabolic_impact": "Autoimmune reaction to hair follicles → patchy hair loss",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "keratitis",
+      "disease_name": "Keratitis",
+      "risk_factors": ["low_vegetables", "high_fruit"],
+      "metabolic_impact": "Corneal inflammation → eye pain and sensitivity",
+      "category": "ophthalmological"
+    },
+    {
+      "disease_id": "common_cold",
+      "disease_name": "Common Cold Syndrome",
+      "risk_factors": ["irregular", "breakfast_skipping", "picky_eating", "no_meat", "no_seafood", "low_vegetables", "high_fruit", "low_soy"],
+      "metabolic_impact": "Immune function decline → viral susceptibility",
+      "category": "others"
+    },
+    {
+      "disease_id": "irritable_bowel_syndrome",
+      "disease_name": "Irritable Bowel Syndrome",
+      "risk_factors": ["fast_eating", "overeating", "spicy", "alcohol", "hot_food", "caffeine", "soda_on_empty_stomach"],
+      "metabolic_impact": "Gut-brain axis dysfunction → altered motility and sensitivity",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "hepatitis",
+      "disease_name": "Hepatitis",
+      "risk_factors": ["drinking_without_food", "high_fat", "alcohol", "heavy_drinking"],
+      "metabolic_impact": "Hepatocellular inflammation → liver enzyme elevation",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "cirrhosis",
+      "disease_name": "Cirrhosis",
+      "risk_factors": ["irregular", "drinking_without_food", "high_fat", "alcohol", "heavy_drinking", "no_seafood", "low_vegetables", "high_fruit", "low_fruit"],
+      "metabolic_impact": "Progressive liver fibrosis → synthetic dysfunction",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "eye_strain",
+      "disease_name": "Eye Strain",
+      "risk_factors": ["irregular", "breakfast_skipping", "picky_eating", "drinking_without_food", "heavy_drinking", "low_vegetables", "high_fruit", "high_snacking"],
+      "metabolic_impact": "Ciliary muscle fatigue → accommodative dysfunction",
+      "category": "others"
+    },
+    {
+      "disease_id": "psoriasis",
+      "disease_name": "Psoriasis",
+      "risk_factors": ["no_blue_fish", "low_vegetables", "high_fruit", "low_fruit", "low_soy", "high_processed_food", "high_snacking"],
+      "metabolic_impact": "Accelerated keratinocyte proliferation → chronic inflammation",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "bronchitis",
+      "disease_name": "Bronchitis",
+      "risk_factors": ["breakfast_skipping", "picky_eating", "low_vegetables", "high_fruit"],
+      "metabolic_impact": "Bronchial mucosal inflammation → cough and sputum",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "bronchiectasis",
+      "disease_name": "Bronchiectasis",
+      "risk_factors": ["breakfast_skipping", "picky_eating", "low_vegetables", "high_fruit"],
+      "metabolic_impact": "Irreversible airway dilation → chronic sputum production",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "bronchial_asthma",
+      "disease_name": "Bronchial Asthma",
+      "risk_factors": ["irregular", "picky_eating", "spicy", "no_blue_fish"],
+      "metabolic_impact": "Airway hyperresponsiveness → bronchoconstriction",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "angina_pectoris",
+      "disease_name": "Angina Pectoris",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "high_salt", "high_fat", "alcohol", "heavy_drinking", "sweets", "caffeine", "soda_on_empty_stomach", "high_meat", "no_seafood", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "low_fruit", "high_fruit", "low_seaweed", "low_soy", "high_processed_food", "low_fluid", "high_snacking"],
+      "metabolic_impact": "Myocardial ischemia → chest pain on exertion",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "subarachnoid_hemorrhage",
+      "disease_name": "Subarachnoid Hemorrhage",
+      "risk_factors": ["irregular", "late_night_meal", "high_salt", "spicy", "heavy_drinking", "high_meat", "no_seafood"],
+      "metabolic_impact": "Rupture of cerebral aneurysm → bleeding into subarachnoid space",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "dysmenorrhea",
+      "disease_name": "Dysmenorrhea",
+      "risk_factors": ["breakfast_skipping", "picky_eating", "high_meat", "no_seafood", "low_soy", "high_processed_food"],
+      "metabolic_impact": "Excessive prostaglandin production → uterine cramping",
+      "category": "gynecological"
+    },
+    {
+      "disease_id": "conjunctivitis",
+      "disease_name": "Conjunctivitis",
+      "risk_factors": ["low_vegetables", "high_fruit"],
+      "metabolic_impact": "Conjunctival inflammation → redness and discharge",
+      "category": "ophthalmological"
+    },
+    {
+      "disease_id": "diarrhea",
+      "disease_name": "Diarrhea",
+      "risk_factors": ["late_night_meal", "fast_eating", "overeating", "spicy", "soda_on_empty_stomach", "high_dairy"],
+      "metabolic_impact": "Accelerated intestinal transit → loose stools",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "hypertension",
+      "disease_name": "Hypertension",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "high_salt", "alcohol", "low_vegetables", "low_fruit", "low_seaweed", "low_snacking"],
+      "metabolic_impact": "Sustained elevated peripheral resistance → increased afterload",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "hyperlipidemia",
+      "disease_name": "Hyperlipidemia",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "high_fat", "alcohol", "heavy_drinking", "sweets", "soda_on_empty_stomach", "high_meat", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "low_seaweed", "low_soy", "high_processed_food", "high_snacking"],
+      "metabolic_impact": "Lipid metabolism disorder → elevated cholesterol/triglycerides",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "hyperthyroidism",
+      "disease_name": "Hyperthyroidism",
+      "risk_factors": ["spicy"],
+      "metabolic_impact": "Excessive thyroid hormone production → increased metabolic rate",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "hypothyroidism",
+      "disease_name": "Hypothyroidism",
+      "risk_factors": ["irregular", "picky_eating", "high_meat", "no_seafood", "low_soy"],
+      "metabolic_impact": "Insufficient thyroid hormone production → reduced metabolic rate",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "cheilitis",
+      "disease_name": "Cheilitis",
+      "risk_factors": ["irregular", "breakfast_skipping", "picky_eating", "overeating", "frequent_dining_out", "drinking_without_food", "spicy", "heavy_drinking", "caffeine", "soda_on_empty_stomach", "high_fruit", "high_processed_food"],
+      "metabolic_impact": "Lip inflammation → cracking and redness",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "laryngitis",
+      "disease_name": "Laryngitis",
+      "risk_factors": ["irregular", "heavy_drinking", "hot_food", "high_fruit"],
+      "metabolic_impact": "Laryngeal mucosal inflammation → hoarseness",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "stomatitis",
+      "disease_name": "Stomatitis",
+      "risk_factors": ["irregular", "breakfast_skipping", "picky_eating", "overeating", "frequent_dining_out", "spicy", "heavy_drinking", "caffeine", "soda_on_empty_stomach", "high_fruit", "high_processed_food"],
+      "metabolic_impact": "Oral mucosal ulceration → pain during eating",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "osteoporosis",
+      "disease_name": "Osteoporosis",
+      "risk_factors": ["picky_eating", "drinking_without_food", "high_salt", "sweets", "caffeine", "soda_on_empty_stomach", "no_seafood", "low_dairy", "low_small_fish", "low_soy", "high_processed_food"],
+      "metabolic_impact": "Reduced bone mineral density → fracture risk",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "atonic_constipation",
+      "disease_name": "Atonic Constipation",
+      "risk_factors": ["irregular", "breakfast_skipping", "soft_food", "low_vegetables", "low_fruit", "low_seaweed", "low_small_fish", "low_soy", "high_processed_food", "low_fluid", "high_snacking"],
+      "metabolic_impact": "Reduced colonic motility → infrequent bowel movements",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "uterine_cancer",
+      "disease_name": "Uterine Cancer",
+      "risk_factors": ["irregular", "high_fat", "high_meat", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "high_fruit"],
+      "metabolic_impact": "Estrogen dominance → endometrial proliferation",
+      "category": "gynecological"
+    },
+    {
+      "disease_id": "periodontal_disease",
+      "disease_name": "Periodontal Disease / Pyorrhea / Gingivitis",
+      "risk_factors": ["fast_eating", "high_meat", "western_diet", "low_vegetables", "high_fruit", "low_fruit", "low_soy", "high_processed_food", "high_snacking"],
+      "metabolic_impact": "Gum inflammation → tooth mobility and loss",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "fatty_liver",
+      "disease_name": "Fatty Liver",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "drinking_without_food", "high_fat", "alcohol", "heavy_drinking", "sweets", "soda_on_empty_stomach", "high_meat", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "low_seaweed", "low_soy", "high_processed_food", "high_snacking"],
+      "metabolic_impact": "Hepatic fat accumulation → steatosis",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "esophagitis",
+      "disease_name": "Esophagitis",
+      "risk_factors": ["high_salt", "spicy", "heavy_drinking", "hot_food", "caffeine"],
+      "metabolic_impact": "Esophageal mucosal inflammation → burning pain",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "food_allergy",
+      "disease_name": "Food Allergy",
+      "risk_factors": ["high_fat", "high_dairy"],
+      "metabolic_impact": "Immune reaction to food proteins → systemic inflammation",
+      "category": "others"
+    },
+    {
+      "disease_id": "seborrheic_dermatitis",
+      "disease_name": "Seborrheic Dermatitis",
+      "risk_factors": ["overeating", "spicy", "high_fat", "sweets", "high_meat", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "low_seaweed", "high_processed_food", "high_snacking"],
+      "metabolic_impact": "Malassezia yeast overgrowth → scaly, oily patches",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "pyelonephritis",
+      "disease_name": "Pyelonephritis",
+      "risk_factors": ["irregular", "low_fluid"],
+      "metabolic_impact": "Kidney infection → flank pain and fever",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "nephritis",
+      "disease_name": "Nephritis",
+      "risk_factors": ["irregular", "high_salt", "heavy_drinking", "low_vegetables", "high_fruit", "low_fluid"],
+      "metabolic_impact": "Glomerular inflammation → proteinuria and hematuria",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "myocardial_infarction",
+      "disease_name": "Myocardial Infarction",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "high_salt", "high_fat", "alcohol", "heavy_drinking", "caffeine", "high_meat", "no_seafood", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "low_fruit", "high_fruit", "low_seaweed", "low_soy", "high_processed_food", "low_fluid", "high_snacking"],
+      "metabolic_impact": "Coronary artery occlusion → myocardial necrosis",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "heart_failure",
+      "disease_name": "Heart Failure",
+      "risk_factors": ["irregular", "late_night_meal", "fast_eating", "overeating", "drinking_without_food", "high_salt", "spicy", "high_fat", "alcohol", "heavy_drinking", "caffeine", "high_meat", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "high_fruit", "low_fruit", "low_seaweed", "high_processed_food", "low_fluid"],
+      "metabolic_impact": "Reduced cardiac output → fluid accumulation and fatigue",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "urticaria",
+      "disease_name": "Urticaria",
+      "risk_factors": ["picky_eating", "high_fat", "no_blue_fish", "low_vegetables", "eggs_daily", "high_fruit", "low_fruit"],
+      "metabolic_impact": "Mast cell degranulation → itchy wheals",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "pancreatitis",
+      "disease_name": "Pancreatitis",
+      "risk_factors": ["irregular", "late_night_meal", "overeating", "drinking_without_food", "spicy", "high_fat", "heavy_drinking", "soda_on_empty_stomach", "high_meat", "western_diet"],
+      "metabolic_impact": "Pancreatic enzyme autodigestion → severe abdominal pain",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "menstrual_irregularity",
+      "disease_name": "Menstrual Irregularity",
+      "risk_factors": ["breakfast_skipping", "picky_eating", "high_meat", "no_seafood", "low_soy", "high_processed_food"],
+      "metabolic_impact": "Hypothalamic-pituitary-ovarian axis dysfunction → cycle disruption",
+      "category": "gynecological"
+    },
+    {
+      "disease_id": "prostatic_hypertrophy",
+      "disease_name": "Prostatic Hypertrophy",
+      "risk_factors": ["no_seafood", "low_vegetables", "high_fruit", "low_fruit"],
+      "metabolic_impact": "Benign prostate enlargement → urinary symptoms",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "prostate_cancer",
+      "disease_name": "Prostate Cancer",
+      "risk_factors": ["breakfast_skipping", "high_fat", "high_meat", "western_diet", "low_vegetables", "high_dairy"],
+      "metabolic_impact": "Androgen-driven proliferation → malignant transformation",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "herpes_zoster",
+      "disease_name": "Herpes Zoster",
+      "risk_factors": ["irregular", "high_meat", "no_seafood", "high_processed_food"],
+      "metabolic_impact": "Varicella-zoster virus reactivation → painful vesicular rash",
+      "category": "others"
+    },
+    {
+      "disease_id": "cholelithiasis",
+      "disease_name": "Cholelithiasis",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "frequent_dining_out", "high_fat", "sweets", "caffeine", "soda_on_empty_stomach", "high_meat", "low_vegetables", "high_fruit", "low_fruit", "high_snacking"],
+      "metabolic_impact": "Bile supersaturation → gallstone formation",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "cholecystitis",
+      "disease_name": "Cholecystitis",
+      "risk_factors": ["irregular", "overeating", "spicy", "heavy_drinking"],
+      "metabolic_impact": "Gallbladder inflammation → right upper quadrant pain",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "gout_hyperuricemia",
+      "disease_name": "Gout / Hyperuricemia",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "drinking_without_food", "high_fat", "alcohol", "heavy_drinking", "sweets", "soda_on_empty_stomach", "high_meat", "western_diet", "low_vegetables", "high_fruit", "low_fruit", "high_snacking"],
+      "metabolic_impact": "Uric acid crystallization → joint inflammation",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "diabetes_mellitus",
+      "disease_name": "Diabetes Mellitus",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "overeating", "frequent_dining_out", "high_fat", "alcohol", "heavy_drinking", "sweets", "soda_on_empty_stomach", "western_diet", "low_vegetables", "high_dairy", "high_fruit", "high_snacking"],
+      "metabolic_impact": "Insulin resistance and/or beta-cell dysfunction → hyperglycemia",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "diabetic_retinopathy",
+      "disease_name": "Diabetic Retinopathy",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "high_salt", "high_fat", "alcohol", "heavy_drinking", "sweets", "soda_on_empty_stomach", "western_diet", "low_vegetables", "high_dairy", "high_fruit", "high_snacking"],
+      "metabolic_impact": "Microvascular damage in retina → vision loss",
+      "category": "ophthalmological"
+    },
+    {
+      "disease_id": "atherosclerosis",
+      "disease_name": "Atherosclerosis",
+      "risk_factors": ["late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "high_salt", "high_fat", "alcohol", "heavy_drinking", "high_meat", "no_seafood", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "high_fruit", "low_fruit", "low_seaweed", "high_snacking"],
+      "metabolic_impact": "Plaque formation in arterial walls → stenosis",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "mastitis_mastopathy",
+      "disease_name": "Mastitis / Mastopathy",
+      "risk_factors": ["breakfast_skipping", "high_fat", "caffeine", "low_vegetables"],
+      "metabolic_impact": "Breast tissue inflammation → pain and nodules",
+      "category": "gynecological"
+    },
+    {
+      "disease_id": "urethritis",
+      "disease_name": "Urethritis",
+      "risk_factors": ["breakfast_skipping", "low_vegetables"],
+      "metabolic_impact": "Urethral inflammation → dysuria and discharge",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "nephrolithiasis",
+      "disease_name": "Nephrolithiasis",
+      "risk_factors": ["picky_eating", "drinking_without_food", "high_salt", "sweets", "caffeine", "soda_on_empty_stomach", "low_vegetables", "low_dairy", "high_fruit", "low_fruit", "high_fluid"],
+      "metabolic_impact": "Crystal formation in urinary tract → stone disease",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "cerebral_infarction",
+      "disease_name": "Cerebral Infarction",
+      "risk_factors": ["late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "high_salt", "high_fat", "alcohol", "sweets", "caffeine", "soda_on_empty_stomach", "high_meat", "no_blue_fish", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "low_fluid", "high_snacking"],
+      "metabolic_impact": "Thrombotic or embolic occlusion → ischemic stroke",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "cerebral_hemorrhage",
+      "disease_name": "Cerebral Hemorrhage",
+      "risk_factors": ["picky_eating", "drinking_without_food", "high_salt", "alcohol", "heavy_drinking", "high_meat", "no_seafood", "high_fruit"],
+      "metabolic_impact": "Rupture of cerebral vessel → hemorrhagic stroke",
+      "category": "cardiovascular"
+    },
+    {
+      "disease_id": "pneumonia",
+      "disease_name": "Pneumonia",
+      "risk_factors": ["breakfast_skipping", "low_vegetables"],
+      "metabolic_impact": "Lung parenchyma infection → fever and cough",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "tuberculosis",
+      "disease_name": "Tuberculosis",
+      "risk_factors": ["breakfast_skipping", "low_vegetables"],
+      "metabolic_impact": "Mycobacterial infection → chronic cough and weight loss",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "cataract",
+      "disease_name": "Cataract",
+      "risk_factors": ["low_vegetables", "high_fruit"],
+      "metabolic_impact": "Lens opacification → progressive vision loss",
+      "category": "ophthalmological"
+    },
+    {
+      "disease_id": "pruritus_cutaneus",
+      "disease_name": "Pruritus Cutaneus",
+      "risk_factors": ["no_meat", "no_seafood", "low_dairy", "high_fluid", "became_bland"],
+      "metabolic_impact": "Skin itch without primary lesion → systemic cause",
+      "category": "dermatological"
+    },
+    {
+      "disease_id": "anemia",
+      "disease_name": "Anemia",
+      "risk_factors": ["irregular", "breakfast_skipping", "picky_eating", "frequent_dining_out", "high_meat", "no_seafood", "low_vegetables", "low_small_fish", "low_soy", "high_processed_food"],
+      "metabolic_impact": "Reduced red blood cell mass → tissue hypoxia",
+      "category": "others"
+    },
+    {
+      "disease_id": "chronic_gastritis",
+      "disease_name": "Chronic Gastritis",
+      "risk_factors": ["late_night_meal", "fast_eating", "overeating", "drinking_without_food", "high_salt", "spicy", "alcohol", "heavy_drinking", "sweets", "hot_food", "caffeine", "soda_on_empty_stomach", "high_meat"],
+      "metabolic_impact": "Chronic gastric mucosal inflammation → dyspepsia",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "chronic_nephritis",
+      "disease_name": "Chronic Nephritis",
+      "risk_factors": ["irregular", "fast_eating", "overeating", "high_salt", "spicy", "alcohol", "heavy_drinking", "caffeine", "soda_on_empty_stomach", "high_fruit", "low_fruit", "high_fluid", "low_fluid"],
+      "metabolic_impact": "Progressive glomerular damage → renal failure",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "chronic_pancreatitis",
+      "disease_name": "Chronic Pancreatitis",
+      "risk_factors": ["overeating", "drinking_without_food", "spicy", "high_fat", "alcohol", "heavy_drinking", "high_meat", "western_diet", "low_vegetables", "high_dairy"],
+      "metabolic_impact": "Irreversible pancreatic damage → maldigestion",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "low_back_pain",
+      "disease_name": "Low Back Pain",
+      "risk_factors": ["irregular"],
+      "metabolic_impact": "Musculoskeletal strain → lumbar discomfort",
+      "category": "others"
+    },
+    {
+      "disease_id": "benign_nephrosclerosis",
+      "disease_name": "Benign Nephrosclerosis",
+      "risk_factors": ["irregular", "frequent_dining_out", "high_salt", "western_diet", "low_fluid"],
+      "metabolic_impact": "Hypertensive renal damage → arteriolar thickening",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "dementia",
+      "disease_name": "Dementia",
+      "risk_factors": ["high_meat", "no_seafood", "low_vegetables"],
+      "metabolic_impact": "Neurodegenerative changes → cognitive decline",
+      "category": "neurological_psychiatric"
+    },
+    {
+      "disease_id": "nephrolithiasis_2",
+      "disease_name": "Nephrolithiasis",
+      "risk_factors": ["late_night_meal", "picky_eating", "high_fluid"],
+      "metabolic_impact": "Crystal formation in urinary tract → stone disease",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "acute_enteritis",
+      "disease_name": "Acute Enteritis",
+      "risk_factors": ["late_night_meal", "high_salt", "high_meat"],
+      "metabolic_impact": "Acute intestinal infection → diarrhea and vomiting",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "chronic_enteritis",
+      "disease_name": "Chronic Enteritis",
+      "risk_factors": ["late_night_meal", "high_salt", "high_meat"],
+      "metabolic_impact": "Chronic intestinal inflammation → malabsorption",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "gastric_cancer",
+      "disease_name": "Gastric Cancer",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "drinking_without_food", "high_salt", "spicy", "heavy_drinking", "burnt_food", "hot_food", "caffeine", "soda_on_empty_stomach", "high_meat", "low_vegetables", "low_dairy", "high_fruit", "low_fruit"],
+      "metabolic_impact": "Chronic mucosal injury → malignant transformation",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "lung_cancer",
+      "disease_name": "Lung Cancer",
+      "risk_factors": ["breakfast_skipping", "high_fat", "heavy_drinking", "high_meat", "low_vegetables"],
+      "metabolic_impact": "Carcinogen exposure → malignant pulmonary growth",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "liver_cancer",
+      "disease_name": "Liver Cancer",
+      "risk_factors": ["breakfast_skipping", "drinking_without_food", "alcohol", "heavy_drinking", "high_meat", "no_seafood", "low_vegetables", "high_fruit", "low_fruit"],
+      "metabolic_impact": "Hepatocellular carcinoma → liver mass",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "colorectal_cancer",
+      "disease_name": "Colorectal Cancer",
+      "risk_factors": ["irregular", "breakfast_skipping", "frequent_dining_out", "drinking_without_food", "high_fat", "alcohol", "heavy_drinking", "high_meat", "no_seafood", "western_diet", "low_vegetables", "high_dairy", "high_fruit", "low_fruit", "low_seaweed", "low_small_fish"],
+      "metabolic_impact": "Adenoma-carcinoma sequence → colon malignancy",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "pancreatic_cancer",
+      "disease_name": "Pancreatic Cancer",
+      "risk_factors": ["breakfast_skipping", "drinking_without_food", "spicy", "high_fat", "heavy_drinking", "caffeine", "high_meat", "western_diet", "low_vegetables"],
+      "metabolic_impact": "Pancreatic ductal adenocarcinoma → poor prognosis",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "laryngeal_cancer",
+      "disease_name": "Laryngeal Cancer",
+      "risk_factors": ["breakfast_skipping", "high_salt", "spicy", "heavy_drinking", "hot_food", "low_vegetables"],
+      "metabolic_impact": "Laryngeal mucosal malignancy → hoarseness",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "pharyngeal_cancer",
+      "disease_name": "Pharyngeal Cancer",
+      "risk_factors": ["breakfast_skipping", "heavy_drinking", "low_vegetables"],
+      "metabolic_impact": "Pharyngeal malignancy → dysphagia",
+      "category": "respiratory"
+    },
+    {
+      "disease_id": "bladder_cancer",
+      "disease_name": "Bladder Cancer",
+      "risk_factors": ["breakfast_skipping", "low_vegetables"],
+      "metabolic_impact": "Urothelial carcinoma → hematuria",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "breast_cancer",
+      "disease_name": "Breast Cancer",
+      "risk_factors": ["irregular", "breakfast_skipping", "frequent_dining_out", "high_fat", "sweets", "high_meat", "western_diet", "low_vegetables", "high_dairy", "eggs_daily", "high_fruit", "low_fruit", "low_soy", "high_snacking"],
+      "metabolic_impact": "Estrogen-driven proliferation → breast malignancy",
+      "category": "gynecological"
+    },
+    {
+      "disease_id": "obesity",
+      "disease_name": "Obesity",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "picky_eating", "overeating", "frequent_dining_out", "high_fat", "alcohol", "heavy_drinking", "sweets", "soda_on_empty_stomach", "high_meat", "western_diet", "low_vegetables", "high_dairy", "high_snacking"],
+      "metabolic_impact": "Positive energy balance → excessive fat accumulation",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "diabetic_neuropathy",
+      "disease_name": "Diabetic Neuropathy",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "high_salt", "high_fat", "alcohol", "heavy_drinking", "sweets", "soda_on_empty_stomach", "high_meat", "low_vegetables", "high_snacking"],
+      "metabolic_impact": "Peripheral nerve damage → numbness and pain",
+      "category": "metabolic"
+    },
+    {
+      "disease_id": "esophageal_cancer",
+      "disease_name": "Esophageal Cancer",
+      "risk_factors": ["breakfast_skipping", "high_salt", "spicy", "heavy_drinking", "hot_food", "caffeine", "low_vegetables"],
+      "metabolic_impact": "Squamous cell carcinoma → dysphagia",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "colorectal_polyp",
+      "disease_name": "Colorectal Polyp",
+      "risk_factors": ["high_fat", "high_meat", "western_diet", "low_vegetables", "high_dairy", "low_fruit", "low_seaweed"],
+      "metabolic_impact": "Adenomatous polyps → precursor to cancer",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "alcoholic_liver_disease",
+      "disease_name": "Alcoholic Liver Disease",
+      "risk_factors": ["irregular", "drinking_without_food", "alcohol", "heavy_drinking"],
+      "metabolic_impact": "Alcohol-induced hepatotoxicity → liver damage",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "diabetic_nephropathy",
+      "disease_name": "Diabetic Nephropathy",
+      "risk_factors": ["irregular", "breakfast_skipping", "late_night_meal", "fast_eating", "overeating", "frequent_dining_out", "high_salt", "high_fat", "heavy_drinking", "sweets", "soda_on_empty_stomach", "western_diet", "low_vegetables", "high_dairy", "high_snacking"],
+      "metabolic_impact": "Glomerular damage → progressive renal failure",
+      "category": "renal_urological"
+    },
+    {
+      "disease_id": "gastroptosis",
+      "disease_name": "Gastroptosis",
+      "risk_factors": ["late_night_meal", "overeating", "high_salt", "spicy", "hot_food", "high_meat"],
+      "metabolic_impact": "Stomach prolapse → postprandial discomfort",
+      "category": "digestive"
+    },
+    {
+      "disease_id": "cerebral_arteriosclerosis",
+      "disease_name": "Cerebral Arteriosclerosis",
+      "risk_factors": ["high_salt", "high_meat"],
+      "metabolic_impact": "Cerebral vessel stiffening → cognitive decline",
+      "category": "cardiovascular"
+    }
+  ]
+}
