@@ -1,0 +1,28 @@
+# HealthBook-Integrated Dependencies
+# Python 3.9+
+
+# Core dependencies
+numpy>=1.21.0
+pandas>=1.3.0
+
+# Web API (optional)
+flask>=2.0.0
+fastapi>=0.68.0
+uvicorn>=0.15.0
+
+# Data validation
+pydantic>=1.8.0
+
+# Testing
+pytest>=6.2.0
+
+# Visualization (optional)
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Cloud integration (optional)
+azure-cosmos>=4.3.0
+azure-storage-blob>=12.9.0
+
+# Jupyter notebooks (development)
+jupyter>=1.0.0
