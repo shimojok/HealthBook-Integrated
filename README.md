@@ -1,3 +1,13 @@
+> [!NOTE]
+> **This repository has been archived.**
+> 
+> このリポジトリはアーカイブされました。最新の人体フェノミクスエンジンは以下の後継リポジトリを参照してください。
+> 
+> 🩺 [**HealthBook-AI**](https://github.com/shimojok/HealthBook-AI) — 137 diseases × 293 Kampo × 200 questionnaire causal inference engine
+> 
+
+---
+
 # HealthBook-Integrated
 
 **Integrated Health Inference Platform combining Hamada Questionnaire × Disease Matrix × MBT Kampo Metabolic Library**
